@@ -55,6 +55,10 @@ Table wp_users current collation: utf8_general_ci
 Table wp_users converted. New collation: utf8mb4_unicode_ci
 ```
 
+## Note
+
+Once this plugin has been run, you *do not* need to keep it active or installed on your site. Please get rid of the plugin by deleting it once you're done using it!
+
 ## Changelog
 
 ### 1.0.0
