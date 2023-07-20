@@ -6,21 +6,21 @@ Force upgrade your WordPress database to utf8mb4 via WP-CLI.
 
 This WordPress plugin is designed to upgrade your WordPress database to utf8mb4 via WP-CLI. The plugin will go through each table in your database and upgrade its collation to `utf8mb4_unicode_ci`.
 
-Why would you do this? Maybe your database missed this conversion when WordPress 4.2 first shipped. If it did, you may be [affecting your site's performance](https://www.percona.com/blog/charset-and-collation-settings-impact-on-mysql-performance/).
+Why would you do this? Maybe your WordPress install missed running this conversion when WordPress 4.2 first shipped. If it did, you may be [affecting your site's performance](https://www.percona.com/blog/charset-and-collation-settings-impact-on-mysql-performance/) — so upgrading your database is a good idea.
 
 ## Installation
 
-1. Upload the plugin files to the `/wp-content/plugins/utf8mb4-database-upgrader-cli` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/utf8mb4-cli-upgrader` directory, or install the plugin through the WordPress plugins screen directly.
 2. The plugin can be run via WP-CLI with the following command: `wp upgrade_utf8mb4`.
 
 ## Requirements
 
 - WordPress 4.2 or higher
-- PHP 7.0 or higher
+- PHP 5.6 or higher
 
 ## Usage
 
-To run the utf8mb4 upgrade on your WordPress database, use the WP-CLI command:
+To run the `utf8mb4` upgrade on your WordPress database, use the WP-CLI command:
 
 ```
 wp upgrade_utf8mb4
@@ -55,7 +55,9 @@ Table wp_users current collation: utf8_general_ci
 Table wp_users converted. New collation: utf8mb4_unicode_ci
 ```
 
-## Note
+## Notes
+
+**Please** run a backup of your database before running this plugin's CLI command on your site. It's as straightforward as running `wp db export` before running the `wp upgrade_utf8mb4` command.
 
 Once this plugin has been run, you *do not* need to keep it active or installed on your site. Please get rid of the plugin by deleting it once you're done using it!
 
