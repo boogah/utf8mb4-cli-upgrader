@@ -1,10 +1,10 @@
 # utf8mb4 database upgrader for WP-CLI
 
-Force upgrade your WordPress database to utf8mb4 via WP-CLI.
+Force upgrade your WordPress database to `utf8mb4` via WP-CLI.
 
 ## Description
 
-This WordPress plugin is designed to upgrade your WordPress database to utf8mb4 via WP-CLI. The plugin will go through each table in your database and upgrade its collation to `utf8mb4_unicode_ci`.
+This WordPress plugin is designed to upgrade your WordPress database to `utf8mb4` via WP-CLI. The plugin will go through each table in your database and upgrade its collation to `utf8mb4_unicode_ci`.
 
 Why would you do this? Maybe your WordPress install missed running this conversion when WordPress 4.2 first shipped. If it did, you may be [affecting your site's performance](https://www.percona.com/blog/charset-and-collation-settings-impact-on-mysql-performance/) — so upgrading your database is a good idea.
 
